@@ -1,3 +1,12 @@
+<?php
+$program_studi = [
+    'Informatika',
+    'Mesin',
+    'Sistem Informasi'
+];
+?>
+
+
 <!doctype html>
 <html lang="en">
 
@@ -22,9 +31,9 @@
         <div class="form-group">
             <label for="prodi">Pilih Program Studi</label>
             <select class="form-control" id="prodi">
-                <option>Informatika</option>
-                <option>Mesin</option>
-                <option>Sistem Informasi</option>
+                <?php for ($i = 0; $i < count($program_studi); $i++) : ?>
+                    <option><?php echo $program_studi[$i]; ?></option>
+                <?php endfor; ?>
             </select>
         </div>
     </form>
